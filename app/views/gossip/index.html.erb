@@ -1,0 +1,26 @@
+<br/><br/><br/><br/>
+
+<h1>#Gossip</h1><% @x = @po.length %>
+<h2>Les publications récentes</h2>
+<br/>
+<% i=0 %>
+<% while i < 3  %>
+<div class="card">
+  <h5 class="card-header"><%= @po.find(@x).user.name %></h5>
+  <div class="card-body">
+    <h5 class="card-title"><%= @po.find(@x).titre %> :</h5>
+    <p class="card-text"><%= @po.find(@x).body %> ;</p>
+    <a href="/commentaire" class="btn btn-primary">commentaire</a>
+  </div>
+</div>
+<br/>
+<% @x-=1  %>
+ <% i+= 1 %>
+<% end %>
+
+
+<a href="/index" class="badge badge-light" style="margin-left: 1000px ; font-size: 18px">plus</a>
+
+
+
+

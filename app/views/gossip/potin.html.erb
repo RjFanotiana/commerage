@@ -1,0 +1,20 @@
+
+<br/><br/><br/><br/>
+
+<h1>Gossip#potin</h1>
+
+<br>
+<% @po = @po.reverse %>
+ <% @po.each do |x| %>
+<div class="card">
+  <h5 class="card-header"><%= x.user.name %></h5>
+  <div class="card-body">
+    <h5 class="card-title"><%= x.titre %> :</h5>
+    <p class="card-text"><%= x.body %> ;</p>
+    <a href="/commentaire" class="btn btn-primary">commentaire</a>
+  </div>
+</div>
+<br/>
+ <% end %>
+
+
